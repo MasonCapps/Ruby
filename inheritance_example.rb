@@ -5,11 +5,13 @@ class Transportation
   end
 
   def brake
-    puts @speed = 0
+    @speed = 0
+    puts "Your speed is now #{@speed}"
   end
 
   def accelerate
-    puts @speed += 10
+    @speed += 10
+    puts "Your speed is now #{@speed}"
   end
 
   def turn(new_direction)
