@@ -1,7 +1,7 @@
 class Transportation
-  def initialize(variables)
-    @speed = variables[:speed]
-    @direction = variables[:direction]
+  def initialize
+    @speed = 0
+    @direction = "north"
   end
 
   def brake
@@ -21,7 +21,7 @@ end
 
 class Car < Transportation
   def initialize(variables)
-    super
+    super()
     @fuel = variables[:fuel]
     @make = variables[:make]
     @model = variables[:model]
@@ -34,7 +34,7 @@ end
 
 class Bike < Transportation
   def initialize(variables)
-    super
+    super()
     @type = variables[:type]
     @weight = variables[:weight]
   end
@@ -44,7 +44,7 @@ class Bike < Transportation
   end
 end
 
-car = Car.new({ speed: 50, direction: "north", fuel: "full", make: "Nissan", model: "Altima" })
-bike = Bike.new({ speed: 10, direction: "south", type: "mountain", weight: "30 pounds" })
+car = Car.new({ fuel: "full", make: "Nissan", model: "Altima" })
+bike = Bike.new({ type: "mountain", weight: "30 pounds" })
 p car
 p bike
