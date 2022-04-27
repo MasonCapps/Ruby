@@ -30,7 +30,7 @@ end
 
 class Food < Item
   def initialize(variables)
-    super(variables)
+    super
     @shelf_life = variables[:shelf_life]
   end
 
