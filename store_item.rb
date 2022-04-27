@@ -17,10 +17,10 @@ class Item
   attr_reader :name, :color, :price
   attr_writer :price
 
-  def initialize(name, color, price)
-    @name = name
-    @color = color
-    @price = price
+  def initialize(variables)
+    @name = variables[:name]
+    @color = variables[:color]
+    @price = variables[:price]
   end
 
   def information
@@ -28,7 +28,7 @@ class Item
   end
 end
 
-item = Item.new("Water", "clear", 2)
+item = Item.new({ name: "water", color: "clear", price: 2 })
 item.information
 item.price = 5
 item.information
