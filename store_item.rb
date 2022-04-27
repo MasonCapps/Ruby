@@ -28,7 +28,19 @@ class Item
   end
 end
 
+class Food < Item
+  def initialize(variables)
+    super(variables)
+    @shelf_life = variables[:shelf_life]
+  end
+
+  def shelf_life
+    @shelf_life = shelf_life
+  end
+end
+
 item = Item.new({ name: "water", color: "clear", price: 2 })
 item.information
-item.price = 5
-item.information
+
+food = Food.new({ name: "water", color: "clear", price: 2, shelf_life: "Forever" })
+p food
