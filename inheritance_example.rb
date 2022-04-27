@@ -21,7 +21,7 @@ end
 
 class Car < Transportation
   def initialize(variables)
-    super(variables)
+    super
     @fuel = variables[:fuel]
     @make = variables[:make]
     @model = variables[:model]
@@ -34,7 +34,7 @@ end
 
 class Bike < Transportation
   def initialize(variables)
-    super(variables)
+    super
     @type = variables[:type]
     @weight = variables[:weight]
   end
