@@ -48,3 +48,5 @@ car = Car.new({ fuel: "full", make: "Nissan", model: "Altima" })
 bike = Bike.new({ type: "mountain", weight: "30 pounds" })
 p car
 p bike
+
+puts "this is a test"
