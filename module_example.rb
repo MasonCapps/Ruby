@@ -1,4 +1,4 @@
-class Transportation
+module Transportable
   def initialize
     @speed = 0
     @direction = "north"
@@ -19,7 +19,9 @@ class Transportation
   end
 end
 
-class Car < Transportation
+class Car
+  include Transportable
+
   def initialize(variables)
     super()
     @fuel = variables[:fuel]
@@ -32,7 +34,9 @@ class Car < Transportation
   end
 end
 
-class Bike < Transportation
+class Bike
+  include Transportable
+
   def initialize(variables)
     super()
     @type = variables[:type]

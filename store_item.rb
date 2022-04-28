@@ -40,30 +40,30 @@ class Food < Item
 end
 
 food = Food.new({ name: "water", color: "clear", price: 2, shelf_life: "Forever" })
-
 item = Item.new({ name: "water", color: "clear", price: 2 })
-items = []
-items << item
-p item
 
-print "[C]reate [R]ead [U]pdate [D]elete [Q]uit: "
-initial_input = gets.chomp.to_s
+# items = []
+# items << item
+# p item
 
-if initial_input == "c"
-  puts "First name: "
-  input_first_name = gets.chomp
-  puts "Last name: "
-  input_last_name = gets.chomp
-  puts "Salary: "
-  input_salary = gets.chomp.to_i
-  p input_first_name
-  p input_last_name
-  p input_salary
-elsif initial_input == "r"
-  print "Item ID: "
-  input_id = gets.chomp.to_i
-  p items[input_id]
-elsif initial_input == "u"
-elsif initial_input == "d"
-elsif initial_input == "q"
-end
+# print "[C]reate [R]ead [U]pdate [D]elete [Q]uit: "
+# initial_input = gets.chomp.to_s
+
+# if initial_input == "c"
+#   puts "First name: "
+#   input_first_name = gets.chomp
+#   puts "Last name: "
+#   input_last_name = gets.chomp
+#   puts "Salary: "
+#   input_salary = gets.chomp.to_i
+#   p input_first_name
+#   p input_last_name
+#   p input_salary
+# elsif initial_input == "r"
+#   print "Item ID: "
+#   input_id = gets.chomp.to_i
+#   p items[input_id]
+# elsif initial_input == "u"
+# elsif initial_input == "d"
+# elsif initial_input == "q"
+# end
