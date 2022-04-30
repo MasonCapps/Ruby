@@ -3,6 +3,7 @@ require "./information-module.rb"
 
 class Food < Item
   include Informable
+  include Available
 
   def initialize(variables)
     super

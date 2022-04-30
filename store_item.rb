@@ -1,4 +1,4 @@
-require "./food-class.rb"
+require_relative("./food-class.rb")
 require "./item-class.rb"
 
 #JavaScript Symbol Syntax
@@ -15,11 +15,15 @@ puts "#{item1[:name]} is the color #{item1[:color]} and costs #{item1[:price]} d
 puts "#{item2[:name]} is the color #{item2[:color]} and costs #{item2[:price]} dollars."
 puts "#{item3[:name]} is the color #{item3[:color]} and costs #{item3[:price]} dollars."
 
-food = Food.new({ name: "water", color: "clear", price: 2, shelf_life: "Forever" })
-item = Item.new({ name: "water", color: "clear", price: 2 })
+food = Food.new({ name: "water", color: "clear", price: 2, shelf_life: "Forever", stock: true })
+item = Item.new({ name: "water", color: "clear", price: 2, stock: true })
 
 food.information
 item.information
+item.stock = false
+item.information
+
+puts "test"
 
 # items = []
 # items << item
@@ -29,20 +33,24 @@ item.information
 # initial_input = gets.chomp.to_s
 
 # if initial_input == "c"
-#   puts "First name: "
-#   input_first_name = gets.chomp
-#   puts "Last name: "
-#   input_last_name = gets.chomp
-#   puts "Salary: "
-#   input_salary = gets.chomp.to_i
-#   p input_first_name
-#   p input_last_name
-#   p input_salary
+#   print "Name: "
+#   input_name = gets.chomp
+#   print "Color: "
+#   input_color = gets.chomp
+#   print "Price: "
+#   input_price = gets.chomp.to_i
 # elsif initial_input == "r"
 #   print "Item ID: "
-#   input_id = gets.chomp.to_i
-#   p items[input_id]
+#   input_item_id = gets.chomp.to_i
+#   if input_item_id < items.length
+#     p items[input_item_id]
+#   else
+#     p "This item does not exist."
+#   end
 # elsif initial_input == "u"
+#   print "Item ID: "
+#   input_item_id = gets.chomp.to_i
+#   print "The active stock status for this item is items[input_item_id].stock"
 # elsif initial_input == "d"
 # elsif initial_input == "q"
 # end
